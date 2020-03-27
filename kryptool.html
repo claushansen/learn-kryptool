@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Leg med kryptering - Cæsar og Vigénera kode</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #header{
+            background-color: #4CAF50;
+            color: white;
+        }
+        .draggable {
+            padding: 0px;
+            background-color: #ccc;
+            cursor: move;
+            margin: 2px 0;
+            width: 1900px;
+        }
+
+        table {
+            width: 1900px;
+        }
+
+        table td {
+            border: 1px solid #eee;
+            width: 25px;
+            display: block;
+            float: left;
+            text-align: center;
+        }
+
+        .container {
+            width: 860px;
+            margin: 0px auto;
+        }
+
+        #wrapper {
+            position: relative;
+            margin: 20px auto;
+            width: 845px;
+            overflow: hidden;
+        }
+        #overlay{
+            position:absolute;
+            top: 28px;
+            left: 0px;
+            width: 28px;
+            height: 23px;
+            z-index: 100;
+            border: 2px dashed #000;
+        }
+
+       #removeButton{
+            padding: 5px;
+            background-color: red;
+            color: #fff;
+        }
+        #addButton{
+            padding: 5px;
+            background-color: green;
+            color: #fff;
+        }
+        .inputdiv{
+            text-align: center;
+        }
+        input{
+            width: 400px;
+            height: 50px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        input:first-of-type{
+            margin-top: 50px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Leg med kryptering</h1>
+        <p>Når vi skal kryptere med Cæsar kode eller Vigéneres Kode, kan du bruge dette værktøj som en hjælp.</p>
+        <p><strong> OBS!</strong> Vær opmærksom på at resultatet du kommer frem til ikke gemmes, hvis du går væk fra denne side. Så husk at skrive det et andet sted, inden du genindlæser eller går væk fra siden.</p>
+        <div class="inputdiv"><input id="klartekst" type="text" placeholder="Skriv din klar tekst her"></div>
+        <div id="wrapper">
+            <div id="overlay"></div>
+            <div id="header" class="ui-widget-content">
+                <table>
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>D</td>
+                        <td>E</td>
+                        <td>F</td>
+                        <td>G</td>
+                        <td>H</td>
+                        <td>I</td>
+                        <td>J</td>
+                        <td>K</td>
+                        <td>L</td>
+                        <td>M</td>
+                        <td>N</td>
+                        <td>O</td>
+                        <td>P</td>
+                        <td>Q</td>
+                        <td>R</td>
+                        <td>S</td>
+                        <td>T</td>
+                        <td>U</td>
+                        <td>V</td>
+                        <td>W</td>
+                        <td>X</td>
+                        <td>Y</td>
+                        <td>Z</td>
+                        <td>Æ</td>
+                        <td>Ø</td>
+                        <td>Å</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="draggable ui-widget-content">
+                <table>
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>D</td>
+                        <td>E</td>
+                        <td>F</td>
+                        <td>G</td>
+                        <td>H</td>
+                        <td>I</td>
+                        <td>J</td>
+                        <td>K</td>
+                        <td>L</td>
+                        <td>M</td>
+                        <td>N</td>
+                        <td>O</td>
+                        <td>P</td>
+                        <td>Q</td>
+                        <td>R</td>
+                        <td>S</td>
+                        <td>T</td>
+                        <td>U</td>
+                        <td>V</td>
+                        <td>W</td>
+                        <td>X</td>
+                        <td>Y</td>
+                        <td>Z</td>
+                        <td>Æ</td>
+                        <td>Ø</td>
+                        <td>Å</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>D</td>
+                        <td>E</td>
+                        <td>F</td>
+                        <td>G</td>
+                        <td>H</td>
+                        <td>I</td>
+                        <td>J</td>
+                        <td>K</td>
+                        <td>L</td>
+                        <td>M</td>
+                        <td>N</td>
+                        <td>O</td>
+                        <td>P</td>
+                        <td>Q</td>
+                        <td>R</td>
+                        <td>S</td>
+                        <td>T</td>
+                        <td>U</td>
+                        <td>V</td>
+                        <td>W</td>
+                        <td>X</td>
+                        <td>Y</td>
+                        <td>Z</td>
+                        <td>Æ</td>
+                        <td>Ø</td>
+                        <td>Å</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="actions">
+            <a href="#" id="addButton" title="Indsæt ny række" ><i class="fa fa-plus"></i></a>
+            <a href="#" id="removeButton" title="Fjern sidste række" ><i class="fa fa-close"></i></a>
+        </div>
+        <div class="inputdiv"><input id="crypttekst" type="text" placeholder="Skriv din krypterede tekst her"></div>
+    </div>
+    <script>
+        $(function () {
+            $(".draggable").draggable({ axis: "x", grid: [ 29, 20 ]});
+            $('#addButton').on('click', function (e) {
+                e.preventDefault();
+                var overlayHeight = $('#overlay').height() + 28;
+                var elements = $('.draggable');
+                $(elements[0]).clone().draggable({ axis: "x", grid: [ 29, 20 ] }).appendTo($('#wrapper'));
+                $('#overlay').height(overlayHeight);
+            });
+            $('#removeButton').on('click', function (e) {
+                e.preventDefault();
+                var overlayHeight = $('#overlay').height() - 28;
+                var elements = $('.draggable');
+                $(elements[elements.length -1]).remove();
+                $('#overlay').height(overlayHeight);
+            });
+        });
+    </script>
+</body>
+</html>
